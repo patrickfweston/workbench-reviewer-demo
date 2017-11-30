@@ -1,0 +1,22 @@
+uuid: 2a0e3185-2ede-461b-a921-af0eafde33ae
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - user
+_core:
+  default_config_hash: 75McPCoH6UCO4UuPMk0z_A2x_HAIciscUWY_FEgmV0w
+id: node.workbench_reviewer
+field_name: workbench_reviewer
+entity_type: node
+type: entity_reference
+settings:
+  target_type: user
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
