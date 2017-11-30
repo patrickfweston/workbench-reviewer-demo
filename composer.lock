@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "130582ba5fcfa7285dd54b323dd7c4a3",
+    "content-hash": "3d226db816afaf71138aa11b0feeae13",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -932,6 +932,11 @@
                 "symfony/phpunit-bridge": "~3.2.8"
             },
             "type": "drupal-core",
+            "extra": {
+                "patches_applied": {
+                    "Hook entity_field_storage_info is broken (https://www.drupal.org/node/2584729)": "https://www.drupal.org/files/issues/core-entity-sql-content-entity-storage-2583111-1_0.patch"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Drupal\\Core\\": "lib/Drupal/Core",
@@ -1115,9 +1120,6 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
-                },
-                "patches_applied": {
-                    "Fix type errors from WorkbenchModeration edit tab labeling (https://www.drupal.org/node/2769119#comment-11624207)": "https://www.drupal.org/files/issues/workbench_moderation-edit_tab-2769119-6.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -1558,12 +1560,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/patrickfweston/workbench_reviewer.git",
-                "reference": "e606bbbc1dd562b3039e73ab733be12641687d9b"
+                "reference": "1bbaef3c94abe4a5c57d5ef84b3468574aa4488f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/patrickfweston/workbench_reviewer/zipball/e606bbbc1dd562b3039e73ab733be12641687d9b",
-                "reference": "e606bbbc1dd562b3039e73ab733be12641687d9b",
+                "url": "https://api.github.com/repos/patrickfweston/workbench_reviewer/zipball/1bbaef3c94abe4a5c57d5ef84b3468574aa4488f",
+                "reference": "1bbaef3c94abe4a5c57d5ef84b3468574aa4488f",
                 "shasum": ""
             },
             "require": {
@@ -1593,7 +1595,7 @@
                 "source": "https://github.com/patrickfweston/workbench_reviewer/tree/master",
                 "issues": "https://github.com/patrickfweston/workbench_reviewer/issues"
             },
-            "time": "2017-11-21T05:20:47+00:00"
+            "time": "2017-11-30T05:07:22+00:00"
         },
         {
             "name": "palantirnet/workbench_tabs",
