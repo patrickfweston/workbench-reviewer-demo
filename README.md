@@ -1,104 +1,105 @@
-# Drupal Skeleton
+# Workbench Reviewer
 
-This is a template for Drupal 8 projects using the `composer create-project` command.
+A sample site to test out the new Workbench Reviewer module.
 
-## Starting a project
+## Table of Contents
 
-1. Use composer to create a new project based on this skeleton:
+* [Development Environment](#development-environment)
+* [Getting Started](#getting-started)
+* [How do I work on this?](#how-do-i-work-on-this)
+* [Drupal Development](#drupal-development)
+* [Deployment](#Deployment)
+* [Styleguide Development](#styleguide-development)
+* [Additional Documentation](#additional-documentation)
 
-  ```
-  composer create-project palantirnet/drupal-skeleton PROJECTNAME dev-drupal8 --no-interaction
-  ```
-2. Go into the project:
+## Development Environment
 
-  ```
-  cd PROJECTNAME
-  ```
-3. Update the `README`:
-  * Remove the `README.md`
-  * Rename the `README.dist.md` to `README.md`
-  * Edit as you like
-4. Update the `composer.json`:
-  * Change the `name` from `palantirnet/drupal-skeleton` to `palantirnet/PROJECTNAME`
-  * Update the `description` with a brief description of your project.
-  * Update the lock file so composer doesn't complain:
+The development environment is based on [palantirnet/the-vagrant](https://github.com/palantirnet/the-vagrant). To run the environment, you will need:
 
-    ```
-    composer update --lock
-    ```
-5. Add our Vagrant development environment:
+* Mac OS X >= 10.10. _This stack may run under other host operating systems, but is not regularly tested. For details on installing these dependencies on your Mac, see our [Mac setup doc [internal]](https://github.com/palantirnet/documentation/wiki/Mac-Setup)._
+* [Composer](https://getcomposer.org)
+* VMWare, or [virtualBox](https://www.virtualbox.org/wiki/Downloads) >= 5.0
+* [ansible](https://github.com/ansible/ansible) `brew install ansible`
+* [vagrant](https://www.vagrantup.com/) >= 1.8
+* Vagrant plugins:
+  * [vagrant-hostmanager](https://github.com/smdahlen/vagrant-hostmanager) `vagrant plugin install vagrant-hostmanager`
+  * [vagrant-auto_network](https://github.com/oscar-stack/vagrant-auto_network) `vagrant plugin install vagrant-auto_network`
+  * [vagrant-triggers](https://github.com/emyl/vagrant-triggers) `vagrant plugin install vagrant-triggers`
 
-  ```
-  vendor/bin/the-vagrant-installer
-  ```
-6. Add our build scripts:
+If you update Vagrant, you may need to update your vagrant plugins with `vagrant plugin update`.
 
-  ```
-  vendor/bin/the-build-installer
-  ```
-7. Initialize git and commit your work to the `develop` branch:
+## Getting Started
+
+1. Clone the project from github: `git clone https://github.com/palantirnet/your-project.git`
+1. From inside the project root, run:
 
   ```
-  git init
-  git checkout -b develop
-  git commit --allow-empty -m "Initial commit."
-  git add --all
-  git commit -m "Add the skeleton."
+    composer install --ignore-platform-reqs
+    vagrant up
   ```
-8. Push your work up to an empty repository on GitHub
+3. You will be prompted for the administration password on your host machine
+4. Log in to the virtual machine (the VM): `vagrant ssh`
+5. From within the VM, build and install the Drupal site: `phing build install migrate`
+1. Visit your site at [drupal-skeleton.local](http://drupal-skeleton.local)
 
-  ```
-  git remote add origin git@github.com:palantirnet/PROJECTNAME.git
-  git push -u origin develop
-  ```
+## How do I work on this?
 
-Now you should be ready to follow the instructions in YOUR `README.md` to start up the project. You'll probably want to do the initial Drupal installation at this point to generate a set of Drupal config files.
+You can edit code, update documentation, and run git commands by opening files directly from your host machine.
 
-9. Start up your Vagrant VM:
+To run project-related commands other than `vagrant up` and `vagrant ssh`:
 
-  ```
-  vagrant up
-  vagrant ssh
-  ```
-10. Install Drupal:
+* SSH into the VM with `vagrant ssh`
+* You'll be in your project root, at the path `/var/www/uw-stout.local/`
+* You can run `composer`, `drush`, and `phing` commands from here
 
-  ```
-  vendor/bin/phing build install
-  ```
-11. Log into Drupal in your browser and do some basic config customizations:
+To work on the styleguide:
 
-  * Set the site timezone
-  * Disable per-user timezones
-  * Disable user account creation
-  * Remove unnecessary content types
-  * Set the admin email address (your VM will trap all emails)
-  * Turn the Cron interval down to "never"
-  * Uninstall unnecessary modules (e.g. Search, History, Comment)
-12. Export your config:
+* SSH in to the VM with `vagrant ssh`
+* Go to the styleguide directory: `cd styleguide`; you'll be at the path `/var/www/your-project.local/styleguide`
+* You can run butler from here with `npm run butler`, then view the styleguide in your browser at [your-project.local:4000](http://your-project.local:4000)
 
-  ```
-  drush cex -y
-  ```
-13. Update the install profile in your default build properties (`conf/build.default.properties`):
+Avoid committing to git from within your VM, because your commits won't be properly attributed to you. If you must, make sure you [create a global .gitignore [internal]](https://github.com/palantirnet/documentation/wiki/Using-the-gitignore-File) within your VM at `/home/vagrant/.gitignore`, and configure your name and email for proper attribution:
 
-  ```
-  drupal.install_profile=config_installer
-  ```
-14. You should have a ton of new `*.yml` files in `conf/drupal/config`. Add them, and this config change, to git:
+```
+git config --global user.email 'me@palantir.net'
+git config --global user.name 'My Name'
+```
 
-  ```
-  git add conf/
-  git ci -m "Initial Drupal configuration."
-  git push
-  ```
-15. Reinstall your site and verify that your config is ready to go:
+## Drupal Development
 
-  ```
-  vendor/bin/phing build install
-  ```
+You can refresh/reset your local Drupal site at any time. SSH into your VM and then:
 
-## More information
+1. Download the most current dependencies: `composer install`
+2. Rebuild your local CSS and Drupal settings file: `phing build`
+3. Reinstall Drupal: `phing install`
+4. Run your migrations: `phing migrate`
+5. ... OR run all three phing targets at once: `phing build install migrate`
 
-* Site build and install process: [the-build](https://github.com/palantirnet/the-build)
-* Development environment setup: [the-vagrant](https://github.com/palantirnet/the-vagrant)
-* Managing config: [the d8-lab](https://github.com/palantirnet/d8-lab/blob/master/managing-config.md)
+Additional information on developing for Drupal within this environment is in [docs/general/drupal_development.md](docs/general/drupal_development.md).
+
+## Deployment
+
+@todo This section needs to be customized per-project.
+
+## Styleguide Development
+
+* Serve the styleguide and watch for changes:
+  * From your VM: `cd styleguide && npm run butler`
+  * Visit [your-site.local:4000](http://your-site.local:4000)
+  * Hit control+c to stop
+
+Complete Butler usage is documented in [docs/general/styleguide_development.md](docs/general/styleguide_development.md).
+
+## Additional Documentation
+
+Project-specific:
+
+* [Technical Approach](docs/technical_approach.md)
+
+General:
+
+* [Drupal Development](docs/general/drupal_development.md)
+* [Styleguide Development](docs/general/styleguide_development.md)
+
+----
+Copyright 2017 Palantir.net, Inc.
