@@ -1560,12 +1560,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/patrickfweston/workbench_reviewer.git",
-                "reference": "1bbaef3c94abe4a5c57d5ef84b3468574aa4488f"
+                "reference": "b493c8c9020c842d275ed3ddf6bbe197308941be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/patrickfweston/workbench_reviewer/zipball/1bbaef3c94abe4a5c57d5ef84b3468574aa4488f",
-                "reference": "1bbaef3c94abe4a5c57d5ef84b3468574aa4488f",
+                "url": "https://api.github.com/repos/patrickfweston/workbench_reviewer/zipball/b493c8c9020c842d275ed3ddf6bbe197308941be",
+                "reference": "b493c8c9020c842d275ed3ddf6bbe197308941be",
                 "shasum": ""
             },
             "require": {
@@ -1595,7 +1595,7 @@
                 "source": "https://github.com/patrickfweston/workbench_reviewer/tree/master",
                 "issues": "https://github.com/patrickfweston/workbench_reviewer/issues"
             },
-            "time": "2017-11-30T05:07:22+00:00"
+            "time": "2017-11-30T05:51:27+00:00"
         },
         {
             "name": "palantirnet/workbench_tabs",
