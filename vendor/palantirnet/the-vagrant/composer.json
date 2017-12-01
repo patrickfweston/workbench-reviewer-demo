@@ -1,0 +1,17 @@
+{
+    "name": "palantirnet/the-vagrant",
+    "description": "Install a Vagrant environment into a Drupal project.",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Palantir.net",
+            "email": "info@palantir.net"
+        }
+    ],
+    "bin": [
+        "bin/the-vagrant-installer"
+    ],
+    "require": {
+        "phing/phing": "^2.14"
+    }
+}

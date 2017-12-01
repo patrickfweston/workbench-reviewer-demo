@@ -1,0 +1,80 @@
+<?php
+
+use Drupal\Core\Field\BaseFieldDefinition;
+
+/**
+ * Implements hook_entity_bundle_field_info().
+ */
+function workbench_reviewer_entity_bundle_field_info(\Drupal\Core\Entity\EntityTypeInterface $entity_type, $bundle, array $base_field_definitions) {
+  // Only add the reviewer field for bundles that are under moderation.
+  if ($entity_type->id() == 'node' && array_key_exists('moderation_state', $base_field_definitions)) {
+    $definitions['workbench_reviewer'] = \Drupal\Core\Field\BaseFieldDefinition::create('entity_reference')
+      ->setLabel('Workbench Reviewer')
+      ->setDisplayConfigurable('view', TRUE)
+      ->setDisplayOptions('view', array(
+        'label' => 'hidden',
+        'type' => 'hidden',
+      ))
+      ->setDisplayConfigurable('form', FALSE)
+      ->setDisplayOptions('form', array(
+        'type' => 'entity_reference_autocomplete',
+        'weight' => -100,
+        'settings' => array(
+          'size' => 60,
+          'match_operator' => 'CONTAINS',
+          'placeholder' => ''
+        ),
+      ))
+      ->setSetting('target_type', 'user');
+    return $definitions;
+  }
+}
+
+/**
+ * Implements hook_entity_field_storage_info().
+ */
+function workbench_reviewer_entity_field_storage_info(\Drupal\Core\Entity\EntityTypeInterface $entity_type) {
+  if ($entity_type->id() == 'node') {
+    $definitions['workbench_reviewer'] = \Drupal\Core\Field\BaseFieldDefinition::create('entity_reference')
+      ->setName('workbench_reviewer')
+      ->setLabel(t('Workbench Reviewer'))
+      ->setTargetEntityTypeId($entity_type->id())
+      ->setSetting('target_type', 'user');
+    return $definitions;
+  }
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ *
+ */
+function workbench_reviewer_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  // Create a workflow section in the right "advanced" sidebar.
+  $form['workflow'] = [
+    '#type' => 'details',
+    '#title' => t('Workflow'),
+    '#group' => 'advanced',
+    '#attributes' => [
+      'class' => ['node-form-options']
+    ],
+    '#attached' => [
+      'library' => ['node/drupal.node'],
+    ],
+    '#weight' => 100,
+    '#optional' => FALSE
+  ];
+
+  // Move the Workbench Reviewer field to a new "Workflow" tab.
+  $form['revision_log']['#group'] = 'workflow';
+  $form['workbench_reviewer']['#group'] = 'workflow';
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function workbench_reviewer_preprocess_page(&$variables) {
+  // For admin pages, add in our library.
+  if ($variables['is_admin']) {
+    $variables['#attached']['library'][] = 'workbench_reviewer/workbench_reviewer';
+  }
+}
