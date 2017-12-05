@@ -2,6 +2,8 @@
 
 $databases = array();
 
+$settings['install_profile'] = 'config_installer';
+
 $config_directories = array();
 // In this codebase, config is managed by git and lives outside of the Drupal root.
 $config_directories = [CONFIG_SYNC_DIRECTORY => '../conf/drupal/config'];
@@ -28,5 +30,3 @@ if (file_exists($app_root . '/' . $site_path . '/settings.build.php')) {
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
-
-$settings['install_profile'] = 'standard';
