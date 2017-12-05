@@ -13,7 +13,7 @@ $settings['trusted_host_patterns'] = [
 
 // Include the Acquia database connection and other config.
 if (file_exists('/var/www/site-php')) {
-  require '/var/www/site-php/workbenchreviewer/workbenchreviewer-settings.inc';
+  require '/var/www/site-php/workbenchreviewerwj3iaaszrt/D8-dev-workbenchreviewer-settings.inc';
 }
 
 // Enable memcache on Acquia.
