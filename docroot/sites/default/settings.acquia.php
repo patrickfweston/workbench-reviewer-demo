@@ -11,11 +11,6 @@ $settings['trusted_host_patterns'] = [
   '^workbenchreviewerwj3iaaszrt.devcloud.acquia-sites.com',
 ];
 
-// Include the Acquia database connection and other config.
-if (file_exists('/var/www/site-php')) {
-  include $app_root . '/' . $site_path . '/settings.acquia.php';
-}
-
 // Enable memcache on Acquia.
 //if (file_exists('/var/www/site-php')) {
 //  // Memcache settings.

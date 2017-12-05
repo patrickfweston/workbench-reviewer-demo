@@ -17,6 +17,11 @@ $settings['file_private_path'] = '';
 
 $config['acquia_connector.settings']['hide_signup_messages'] = TRUE;
 
+// Include the Acquia database connection and other config.
+if (file_exists('/var/www/site-php')) {
+  include $app_root . '/' . $site_path . '/settings.acquia.php';
+}
+
 // Dev environment settings file provided by the-build.
 if (file_exists($app_root . '/' . $site_path . '/settings.build.php')) {
   include $app_root . '/' . $site_path . '/settings.build.php';
