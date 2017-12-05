@@ -7,7 +7,13 @@ use Drupal\Core\Field\BaseFieldDefinition;
  */
 function workbench_reviewer_entity_bundle_field_info(\Drupal\Core\Entity\EntityTypeInterface $entity_type, $bundle, array $base_field_definitions) {
   // Only add the reviewer field for bundles that are under moderation.
-  if ($entity_type->id() == 'node' && array_key_exists('moderation_state', $base_field_definitions)) {
+  $node_type = \Drupal\node\Entity\NodeType::load($bundle);
+  $is_moderated = false;
+  if ($node_type) {
+    $is_moderated = $node_type->getThirdPartySetting('workbench_moderation', 'enabled', FALSE);
+  }
+
+  if ($entity_type->id() == 'node' && $is_moderated) {
     $definitions['workbench_reviewer'] = \Drupal\Core\Field\BaseFieldDefinition::create('entity_reference')
       ->setLabel('Assign to for review')
       ->setDisplayConfigurable('view', TRUE)
@@ -49,24 +55,31 @@ function workbench_reviewer_entity_field_storage_info(\Drupal\Core\Entity\Entity
  *
  */
 function workbench_reviewer_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-  // Create a workflow section in the right "advanced" sidebar.
-  $form['workflow'] = [
-    '#type' => 'details',
-    '#title' => t('Workflow'),
-    '#group' => 'advanced',
-    '#attributes' => [
-      'class' => ['node-form-options']
-    ],
-    '#attached' => [
-      'library' => ['node/drupal.node'],
-    ],
-    '#weight' => 100,
-    '#optional' => FALSE
-  ];
+  // Only alter the form if this bundle is under moderation.
+  $node = $form_state->getFormObject()->getEntity();
+  $node_type = \Drupal\node\Entity\NodeType::load($node->bundle());
+  $is_moderated = $node_type->getThirdPartySetting('workbench_moderation', 'enabled', FALSE);
 
-  // Move the Workbench Reviewer field to a new "Workflow" tab.
-  $form['revision_log']['#group'] = 'workflow';
-  $form['workbench_reviewer']['#group'] = 'workflow';
+  if ($is_moderated) {
+    // Create a workflow section in the right "advanced" sidebar.
+    $form['workflow'] = [
+      '#type' => 'details',
+      '#title' => t('Workflow'),
+      '#group' => 'advanced',
+      '#attributes' => [
+        'class' => ['node-form-options']
+      ],
+      '#attached' => [
+        'library' => ['node/drupal.node'],
+      ],
+      '#weight' => 100,
+      '#optional' => FALSE
+    ];
+
+    // Move the Workbench Reviewer field to a new "Workflow" tab.
+    $form['revision_log']['#group'] = 'workflow';
+    $form['workbench_reviewer']['#group'] = 'workflow';
+  }
 }
 
 /**
