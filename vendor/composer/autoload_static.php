@@ -350,11 +350,11 @@ class ComposerStaticInitb3f87df43af60ad53011a9e8088b640c
         ),
         'Drupal\\Driver\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/web/drivers/lib/Drupal/Driver',
+            0 => __DIR__ . '/../..' . '/docroot/drivers/lib/Drupal/Driver',
         ),
         'Drupal\\Core\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/web/core/lib/Drupal/Core',
+            0 => __DIR__ . '/../..' . '/docroot/core/lib/Drupal/Core',
         ),
         'Drupal\\Console\\Dotenv\\' => 
         array (
@@ -374,7 +374,7 @@ class ComposerStaticInitb3f87df43af60ad53011a9e8088b640c
         ),
         'Drupal\\Component\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/web/core/lib/Drupal/Component',
+            0 => __DIR__ . '/../..' . '/docroot/core/lib/Drupal/Component',
         ),
         'DrupalComposer\\DrupalScaffold\\' => 
         array (
@@ -713,14 +713,14 @@ class ComposerStaticInitb3f87df43af60ad53011a9e8088b640c
         'DocBlox_Parallel_Manager' => __DIR__ . '/..' . '/phing/phing/classes/phing/contrib/DocBlox/Parallel/Manager.php',
         'DocBlox_Parallel_Worker' => __DIR__ . '/..' . '/phing/phing/classes/phing/contrib/DocBlox/Parallel/Worker.php',
         'DocBlox_Parallel_WorkerPipe' => __DIR__ . '/..' . '/phing/phing/classes/phing/contrib/DocBlox/Parallel/WorkerPipe.php',
-        'Drupal' => __DIR__ . '/../..' . '/web/core/lib/Drupal.php',
+        'Drupal' => __DIR__ . '/../..' . '/docroot/core/lib/Drupal.php',
         'DrupalFinder\\DrupalFinder' => __DIR__ . '/..' . '/webflo/drupal-finder/src/DrupalFinder.php',
-        'Drupal\\Component\\Utility\\Timer' => __DIR__ . '/../..' . '/web/core/lib/Drupal/Component/Utility/Timer.php',
-        'Drupal\\Component\\Utility\\Unicode' => __DIR__ . '/../..' . '/web/core/lib/Drupal/Component/Utility/Unicode.php',
-        'Drupal\\Core\\Database\\Database' => __DIR__ . '/../..' . '/web/core/lib/Drupal/Core/Database/Database.php',
-        'Drupal\\Core\\DrupalKernel' => __DIR__ . '/../..' . '/web/core/lib/Drupal/Core/DrupalKernel.php',
-        'Drupal\\Core\\DrupalKernelInterface' => __DIR__ . '/../..' . '/web/core/lib/Drupal/Core/DrupalKernelInterface.php',
-        'Drupal\\Core\\Site\\Settings' => __DIR__ . '/../..' . '/web/core/lib/Drupal/Core/Site/Settings.php',
+        'Drupal\\Component\\Utility\\Timer' => __DIR__ . '/../..' . '/docroot/core/lib/Drupal/Component/Utility/Timer.php',
+        'Drupal\\Component\\Utility\\Unicode' => __DIR__ . '/../..' . '/docroot/core/lib/Drupal/Component/Utility/Unicode.php',
+        'Drupal\\Core\\Database\\Database' => __DIR__ . '/../..' . '/docroot/core/lib/Drupal/Core/Database/Database.php',
+        'Drupal\\Core\\DrupalKernel' => __DIR__ . '/../..' . '/docroot/core/lib/Drupal/Core/DrupalKernel.php',
+        'Drupal\\Core\\DrupalKernelInterface' => __DIR__ . '/../..' . '/docroot/core/lib/Drupal/Core/DrupalKernelInterface.php',
+        'Drupal\\Core\\Site\\Settings' => __DIR__ . '/../..' . '/docroot/core/lib/Drupal/Core/Site/Settings.php',
         'DummyPDOQuerySplitter' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/pdo/DummyPDOQuerySplitter.php',
         'EchoProperties' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/EchoProperties.php',
         'EchoTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/EchoTask.php',

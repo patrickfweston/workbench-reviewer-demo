@@ -2687,231 +2687,6 @@
         ]
     },
     {
-        "name": "drupal/config_installer",
-        "version": "1.5.0",
-        "version_normalized": "1.5.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupal.org/project/config_installer",
-            "reference": "8.x-1.5"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/config_installer-8.x-1.5.zip",
-            "reference": "8.x-1.5",
-            "shasum": "ef2ea56469481c482c1ee716438a24b4ad12c6e2"
-        },
-        "require": {
-            "drupal/core": "~8.0"
-        },
-        "type": "drupal-profile",
-        "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-1.5",
-                "datestamp": "1506257944",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "alexpott",
-                "homepage": "https://www.drupal.org/user/157725"
-            }
-        ],
-        "homepage": "https://www.drupal.org/project/config_installer",
-        "support": {
-            "source": "http://cgit.drupalcode.org/config_installer"
-        }
-    },
-    {
-        "name": "drupal/workbench",
-        "version": "1.0.0",
-        "version_normalized": "1.0.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupal.org/project/workbench",
-            "reference": "8.x-1.0"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/workbench-8.x-1.0.zip",
-            "reference": "8.x-1.0",
-            "shasum": "513955b859f71e8ef68616f548e3af1b0a28ac16"
-        },
-        "require": {
-            "drupal/core": "*"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-1.0",
-                "datestamp": "1503595745",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Dave Reid",
-                "homepage": "https://www.drupal.org/user/53892"
-            },
-            {
-                "name": "agentrickard",
-                "homepage": "https://www.drupal.org/user/20975"
-            },
-            {
-                "name": "bbinkovitz",
-                "homepage": "https://www.drupal.org/user/161263"
-            },
-            {
-                "name": "becw",
-                "homepage": "https://www.drupal.org/user/81067"
-            },
-            {
-                "name": "caroltron",
-                "homepage": "https://www.drupal.org/user/171342"
-            },
-            {
-                "name": "robeano",
-                "homepage": "https://www.drupal.org/user/67660"
-            },
-            {
-                "name": "stevector",
-                "homepage": "https://www.drupal.org/user/179805"
-            }
-        ],
-        "description": "Provides convenient dashboards and shortcuts for editors.",
-        "homepage": "https://www.drupal.org/project/workbench",
-        "support": {
-            "source": "http://cgit.drupalcode.org/workbench"
-        }
-    },
-    {
-        "name": "drupal/workbench_email",
-        "version": "1.0.0-alpha7",
-        "version_normalized": "1.0.0.0-alpha7",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupal.org/project/workbench_email",
-            "reference": "8.x-1.0-alpha7"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/workbench_email-8.x-1.0-alpha7.zip",
-            "reference": "8.x-1.0-alpha7",
-            "shasum": "b107a8f4480329cd178d6fd449e8492c935496d4"
-        },
-        "require": {
-            "drupal/core": "*",
-            "drupal/workbench_moderation": "*"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-1.0-alpha7",
-                "datestamp": "1511932986",
-                "security-coverage": {
-                    "status": "not-covered",
-                    "message": "Alpha releases are not covered by Drupal security advisories."
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "frosev",
-                "homepage": "https://www.drupal.org/user/195325"
-            },
-            {
-                "name": "larowlan",
-                "homepage": "https://www.drupal.org/user/395439"
-            },
-            {
-                "name": "teknic",
-                "homepage": "https://www.drupal.org/user/367359"
-            },
-            {
-                "name": "unobot",
-                "homepage": "https://www.drupal.org/user/731188"
-            }
-        ],
-        "description": "Send emails to users when workbench transitions occur",
-        "homepage": "https://www.drupal.org/project/workbench_email",
-        "support": {
-            "source": "http://cgit.drupalcode.org/workbench_email"
-        }
-    },
-    {
-        "name": "palantirnet/workbench_tabs",
-        "version": "dev-8.x-1.x",
-        "version_normalized": "dev-8.x-1.x",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/palantirnet/workbench_tabs.git",
-            "reference": "a3e81da8c077101765c2760586aa2e8b366e6754"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/palantirnet/workbench_tabs/zipball/a3e81da8c077101765c2760586aa2e8b366e6754",
-            "reference": "a3e81da8c077101765c2760586aa2e8b366e6754",
-            "shasum": ""
-        },
-        "time": "2017-03-29T16:26:53+00:00",
-        "type": "drupal-module",
-        "installation-source": "dist",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Bec White",
-                "email": "white@palantir.net"
-            },
-            {
-                "name": "Ashley Cyborski",
-                "email": "cyborski@palantir.net"
-            },
-            {
-                "name": "Patrick Weston",
-                "email": "weston@palantir.net"
-            }
-        ],
-        "description": "Display Drupal's local task tabs and status messages in a consistent location on all pages.",
-        "homepage": "https://github.com/palantirnet/workbench_tabs",
-        "support": {
-            "source": "https://github.com/palantirnet/workbench_tabs/tree/1.1.0",
-            "issues": "https://github.com/palantirnet/workbench_tabs/issues"
-        }
-    },
-    {
         "name": "behat/gherkin",
         "version": "v4.5.1",
         "version_normalized": "4.5.1.0",
@@ -6300,73 +6075,6 @@
         "homepage": "http://www.drush.org"
     },
     {
-        "name": "drupal/coder",
-        "version": "2.12.0",
-        "version_normalized": "2.12.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupal.org/project/coder",
-            "reference": "8.x-2.12"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/coder-8.x-2.12.zip",
-            "reference": "8.x-2.12",
-            "shasum": "271f6d17aab5c61c9ae3d6112ce806e57f2ba2d1"
-        },
-        "require": {
-            "drupal/core": "~8.0"
-        },
-        "require-dev": {
-            "drupal/rules": "*"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-2.x": "2.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-2.12",
-                "datestamp": "1489834083",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "douggreen",
-                "homepage": "https://www.drupal.org/user/29191"
-            },
-            {
-                "name": "pfrenssen",
-                "homepage": "https://www.drupal.org/user/382067"
-            },
-            {
-                "name": "solotandem",
-                "homepage": "https://www.drupal.org/user/240748"
-            },
-            {
-                "name": "stella",
-                "homepage": "https://www.drupal.org/user/66894"
-            },
-            {
-                "name": "sun",
-                "homepage": "https://www.drupal.org/user/54136"
-            }
-        ],
-        "homepage": "https://www.drupal.org/project/coder",
-        "support": {
-            "source": "http://cgit.drupalcode.org/coder"
-        }
-    },
-    {
         "name": "continuousphp/phing-drush-task",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
@@ -6689,6 +6397,127 @@
         "description": "Drupal is an open source content management platform powering millions of websites and applications."
     },
     {
+        "name": "drupal/config_installer",
+        "version": "1.5.0",
+        "version_normalized": "1.5.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/config_installer",
+            "reference": "8.x-1.5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/config_installer-8.x-1.5.zip",
+            "reference": "8.x-1.5",
+            "shasum": "ef2ea56469481c482c1ee716438a24b4ad12c6e2"
+        },
+        "require": {
+            "drupal/core": "~8.0"
+        },
+        "type": "drupal-profile",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.5",
+                "datestamp": "1506257944",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "alexpott",
+                "homepage": "https://www.drupal.org/user/157725"
+            }
+        ],
+        "homepage": "https://www.drupal.org/project/config_installer",
+        "support": {
+            "source": "http://cgit.drupalcode.org/config_installer"
+        }
+    },
+    {
+        "name": "drupal/workbench",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/workbench",
+            "reference": "8.x-1.0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/workbench-8.x-1.0.zip",
+            "reference": "8.x-1.0",
+            "shasum": "513955b859f71e8ef68616f548e3af1b0a28ac16"
+        },
+        "require": {
+            "drupal/core": "*"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.0",
+                "datestamp": "1503595745",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Dave Reid",
+                "homepage": "https://www.drupal.org/user/53892"
+            },
+            {
+                "name": "agentrickard",
+                "homepage": "https://www.drupal.org/user/20975"
+            },
+            {
+                "name": "bbinkovitz",
+                "homepage": "https://www.drupal.org/user/161263"
+            },
+            {
+                "name": "becw",
+                "homepage": "https://www.drupal.org/user/81067"
+            },
+            {
+                "name": "caroltron",
+                "homepage": "https://www.drupal.org/user/171342"
+            },
+            {
+                "name": "robeano",
+                "homepage": "https://www.drupal.org/user/67660"
+            },
+            {
+                "name": "stevector",
+                "homepage": "https://www.drupal.org/user/179805"
+            }
+        ],
+        "description": "Provides convenient dashboards and shortcuts for editors.",
+        "homepage": "https://www.drupal.org/project/workbench",
+        "support": {
+            "source": "http://cgit.drupalcode.org/workbench"
+        }
+    },
+    {
         "name": "drupal/workbench_moderation",
         "version": "1.2.0",
         "version_normalized": "1.2.0.0",
@@ -6794,6 +6623,68 @@
         }
     },
     {
+        "name": "drupal/workbench_email",
+        "version": "1.0.0-alpha7",
+        "version_normalized": "1.0.0.0-alpha7",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/workbench_email",
+            "reference": "8.x-1.0-alpha7"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/workbench_email-8.x-1.0-alpha7.zip",
+            "reference": "8.x-1.0-alpha7",
+            "shasum": "b107a8f4480329cd178d6fd449e8492c935496d4"
+        },
+        "require": {
+            "drupal/core": "*",
+            "drupal/workbench_moderation": "*"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.0-alpha7",
+                "datestamp": "1511932986",
+                "security-coverage": {
+                    "status": "not-covered",
+                    "message": "Alpha releases are not covered by Drupal security advisories."
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "frosev",
+                "homepage": "https://www.drupal.org/user/195325"
+            },
+            {
+                "name": "larowlan",
+                "homepage": "https://www.drupal.org/user/395439"
+            },
+            {
+                "name": "teknic",
+                "homepage": "https://www.drupal.org/user/367359"
+            },
+            {
+                "name": "unobot",
+                "homepage": "https://www.drupal.org/user/731188"
+            }
+        ],
+        "description": "Send emails to users when workbench transitions occur",
+        "homepage": "https://www.drupal.org/project/workbench_email",
+        "support": {
+            "source": "http://cgit.drupalcode.org/workbench_email"
+        }
+    },
+    {
         "name": "palantirnet/workbench_reviewer",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
@@ -6836,6 +6727,115 @@
         "support": {
             "source": "https://github.com/patrickfweston/workbench_reviewer/tree/master",
             "issues": "https://github.com/patrickfweston/workbench_reviewer/issues"
+        }
+    },
+    {
+        "name": "palantirnet/workbench_tabs",
+        "version": "dev-8.x-1.x",
+        "version_normalized": "dev-8.x-1.x",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/palantirnet/workbench_tabs.git",
+            "reference": "a3e81da8c077101765c2760586aa2e8b366e6754"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/palantirnet/workbench_tabs/zipball/a3e81da8c077101765c2760586aa2e8b366e6754",
+            "reference": "a3e81da8c077101765c2760586aa2e8b366e6754",
+            "shasum": ""
+        },
+        "time": "2017-03-29T16:26:53+00:00",
+        "type": "drupal-module",
+        "installation-source": "dist",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Bec White",
+                "email": "white@palantir.net"
+            },
+            {
+                "name": "Ashley Cyborski",
+                "email": "cyborski@palantir.net"
+            },
+            {
+                "name": "Patrick Weston",
+                "email": "weston@palantir.net"
+            }
+        ],
+        "description": "Display Drupal's local task tabs and status messages in a consistent location on all pages.",
+        "homepage": "https://github.com/palantirnet/workbench_tabs",
+        "support": {
+            "source": "https://github.com/palantirnet/workbench_tabs/tree/1.1.0",
+            "issues": "https://github.com/palantirnet/workbench_tabs/issues"
+        }
+    },
+    {
+        "name": "drupal/coder",
+        "version": "2.12.0",
+        "version_normalized": "2.12.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/coder",
+            "reference": "8.x-2.12"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/coder-8.x-2.12.zip",
+            "reference": "8.x-2.12",
+            "shasum": "271f6d17aab5c61c9ae3d6112ce806e57f2ba2d1"
+        },
+        "require": {
+            "drupal/core": "~8.0"
+        },
+        "require-dev": {
+            "drupal/rules": "*"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-2.x": "2.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-2.12",
+                "datestamp": "1489834083",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "douggreen",
+                "homepage": "https://www.drupal.org/user/29191"
+            },
+            {
+                "name": "pfrenssen",
+                "homepage": "https://www.drupal.org/user/382067"
+            },
+            {
+                "name": "solotandem",
+                "homepage": "https://www.drupal.org/user/240748"
+            },
+            {
+                "name": "stella",
+                "homepage": "https://www.drupal.org/user/66894"
+            },
+            {
+                "name": "sun",
+                "homepage": "https://www.drupal.org/user/54136"
+            }
+        ],
+        "homepage": "https://www.drupal.org/project/coder",
+        "support": {
+            "source": "http://cgit.drupalcode.org/coder"
         }
     }
 ]
