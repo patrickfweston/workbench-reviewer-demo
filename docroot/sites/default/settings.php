@@ -3,7 +3,8 @@
 $databases = array();
 
 $config_directories = array();
-$config_directories[CONFIG_SYNC_DIRECTORY] = '../conf/drupal/config';
+// In this codebase, config is managed by git and lives outside of the Drupal root.
+$config_directories = [CONFIG_SYNC_DIRECTORY => '../conf/drupal/config'];
 
 $settings['hash_salt'] = '4ec8b7160d8b7ac8f9b581686c651d73c2e46640a118e1a4ddf1739f0542bb6d';
 $settings['update_free_access'] = FALSE;
