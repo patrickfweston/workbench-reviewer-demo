@@ -39,9 +39,9 @@ dependencies:
   cache_directories:
     - styleguide/node_modules
     - vendor
-    - web/core
-    - web/modules/contrib
-    - web/profiles/contrib
+    - docroot/core
+    - docroot/modules/contrib
+    - docroot/profiles/contrib
     - ~/.composer
     - ~/.npm
 

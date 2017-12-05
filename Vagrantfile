@@ -14,7 +14,7 @@ extra_hostnames = []
 
 ansible_solr_enabled = false
 ansible_https_enabled = false
-ansible_project_web_root = "web"
+ansible_project_web_root = "docroot"
 ansible_timezone = "America/Chicago"
 ansible_system_packages = []
 ansible_custom_playbook = ""

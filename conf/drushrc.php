@@ -11,7 +11,7 @@ if (!empty($output)) {
   $repo = current($output);
 
   # Configure Drush for the current project.
-  $options['root'] = "{$repo}/web";
+  $options['root'] = "{$repo}/docroot";
   $options['uri'] = "http://workbench-reviewer.local";
   $options['include'] = "{$repo}/artifacts/acquiacloud/.drush";
   $options['alias-path'] = "{$repo}/artifacts/acquiacloud/.drush";
