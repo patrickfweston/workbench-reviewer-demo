@@ -17,10 +17,10 @@ if (file_exists('/var/www/site-php')) {
 }
 
 // Enable memcache on Acquia.
-if (file_exists('/var/www/site-php')) {
-  // Memcache settings.
-  $settings['cache']['default'] = 'cache.backend.memcache';
-}
+//if (file_exists('/var/www/site-php')) {
+//  // Memcache settings.
+//  $settings['cache']['default'] = 'cache.backend.memcache';
+//}
 
 //// Add an htaccess prompt on dev.
 //// @see https://docs.acquia.com/articles/password-protect-your-non-production-environments-acquia-hosting#phpfpm
