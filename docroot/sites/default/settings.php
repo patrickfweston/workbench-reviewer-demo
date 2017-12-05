@@ -1,15 +1,6 @@
 <?php
 
 $databases = array();
-$databases['default']['default'] = array(
-  'driver' => 'mysql',
-  'database' => 'drupal',
-  'username' => 'root',
-  'password' => 'root',
-  'host' => '127.0.0.1',
-  'prefix' => '',
-  'collation' => 'utf8mb4_general_ci',
-);
 
 $config_directories = array();
 $config_directories[CONFIG_SYNC_DIRECTORY] = '../conf/drupal/config';
@@ -23,7 +14,18 @@ $settings['file_private_path'] = '';
 
 $config['acquia_connector.settings']['hide_signup_messages'] = TRUE;
 
-if (file_exists(__DIR__ . '/settings.local.php')) {
-  include __DIR__ . '/settings.local.php';
+// Standard Acquia settings file.
+if (isset($_ENV['AH_SITE_ENVIRONMENT'])) {
+  include $app_root . '/' . $site_path . '/settings.acquia.php';
 }
+
+// Dev environment settings file provided by the-build.
+if (file_exists($app_root . '/' . $site_path . '/settings.build.php')) {
+  include $app_root . '/' . $site_path . '/settings.build.php';
+}
+// Local, per-developer config.
+if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+  include $app_root . '/' . $site_path . '/settings.local.php';
+}
+
 $settings['install_profile'] = 'standard';
