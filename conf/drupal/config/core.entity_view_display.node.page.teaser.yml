@@ -28,4 +28,6 @@ content:
     weight: 101
     region: content
 hidden:
+  field_test: true
+  field_test2: true
   workbench_reviewer: true

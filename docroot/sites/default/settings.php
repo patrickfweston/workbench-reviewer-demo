@@ -16,7 +16,7 @@ if (file_exists('/var/www/site-php')) {
   include $app_root . '/' . $site_path . '/settings.acquia.php';
 }
 
-$settings['install_profile'] = 'config_installer';
+$settings['install_profile'] = 'standard';
 
 $config_directories = array();
 // In this codebase, config is managed by git and lives outside of the Drupal root.

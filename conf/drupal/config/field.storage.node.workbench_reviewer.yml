@@ -1,4 +1,4 @@
-uuid: f287dcee-92d4-46e5-a637-c5cb68d4abf4
+uuid: 4d1e3acd-74f1-41f1-91ea-51c5f5ed0bd6
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     - node
     - user
 _core:
-  default_config_hash: 75McPCoH6UCO4UuPMk0z_A2x_HAIciscUWY_FEgmV0w
+  default_config_hash: Pb4-xYkxKrY3LCJFTG8kUoGieM5wMpo9NugD_N1hdvg
 id: node.workbench_reviewer
 field_name: workbench_reviewer
 entity_type: node

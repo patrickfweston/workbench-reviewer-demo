@@ -1,5 +1,0 @@
-workbench_reviewer:
-  version: VERSION
-  css:
-    theme:
-      css/workbench_reviewer.css: {}

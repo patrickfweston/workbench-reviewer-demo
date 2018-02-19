@@ -38,7 +38,7 @@ module:
   workbench: 0
   workbench_email: 0
   workbench_moderation: 0
-  workbench_reviewer: 0
+#  workbench_reviewer: 0
   workbench_tabs: 0
   menu_link_content: 1
   views: 10
