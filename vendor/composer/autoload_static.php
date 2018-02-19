@@ -19,124 +19,22 @@ class ComposerStaticInitb3f87df43af60ad53011a9e8088b640c
         '5a12a5271c58108e0aa33355e6ac54ea' => __DIR__ . '/..' . '/drupal/console-core/src/functions.php',
     );
 
-    public static $prefixLengthsPsr4 = array (
-        'c' => 
-        array (
-            'cweagans\\Composer\\' => 18,
-        ),
-        'Z' => 
-        array (
-            'Zend\\Stdlib\\' => 12,
-            'Zend\\Feed\\' => 10,
-            'Zend\\Escaper\\' => 13,
-            'Zend\\Diactoros\\' => 15,
-        ),
-        'X' => 
-        array (
-            'XdgBaseDir\\' => 11,
-        ),
-        'W' => 
-        array (
-            'Webmozart\\PathUtil\\' => 19,
-            'Webmozart\\Assert\\' => 17,
-        ),
-        'T' => 
-        array (
-            'Twig\\' => 5,
-        ),
-        'S' => 
-        array (
-            'Symfony\\Polyfill\\Mbstring\\' => 26,
-            'Symfony\\Polyfill\\Iconv\\' => 23,
-            'Symfony\\Polyfill\\Apcu\\' => 22,
-            'Symfony\\Component\\Yaml\\' => 23,
-            'Symfony\\Component\\VarDumper\\' => 28,
-            'Symfony\\Component\\Validator\\' => 28,
-            'Symfony\\Component\\Translation\\' => 30,
-            'Symfony\\Component\\Serializer\\' => 29,
-            'Symfony\\Component\\Routing\\' => 26,
-            'Symfony\\Component\\Process\\' => 26,
-            'Symfony\\Component\\HttpKernel\\' => 29,
-            'Symfony\\Component\\HttpFoundation\\' => 33,
-            'Symfony\\Component\\Finder\\' => 25,
-            'Symfony\\Component\\Filesystem\\' => 29,
-            'Symfony\\Component\\ExpressionLanguage\\' => 37,
-            'Symfony\\Component\\EventDispatcher\\' => 34,
-            'Symfony\\Component\\DomCrawler\\' => 29,
-            'Symfony\\Component\\DependencyInjection\\' => 38,
-            'Symfony\\Component\\Debug\\' => 24,
-            'Symfony\\Component\\CssSelector\\' => 30,
-            'Symfony\\Component\\Console\\' => 26,
-            'Symfony\\Component\\Config\\' => 25,
-            'Symfony\\Component\\ClassLoader\\' => 30,
-            'Symfony\\Component\\Cache\\' => 24,
-            'Symfony\\Component\\BrowserKit\\' => 29,
-            'Symfony\\Cmf\\Component\\Routing\\' => 30,
-            'Symfony\\Bridge\\PsrHttpMessage\\' => 30,
-            'Stecman\\Component\\Symfony\\Console\\BashCompletion\\' => 49,
-        ),
-        'R' => 
-        array (
-            'RedBeanPHP\\' => 11,
-        ),
-        'P' => 
-        array (
-            'Psy\\' => 4,
-            'Psr\\SimpleCache\\' => 16,
-            'Psr\\Log\\' => 8,
-            'Psr\\Http\\Message\\' => 17,
-            'Psr\\Container\\' => 14,
-            'Psr\\Cache\\' => 10,
-            'PhpParser\\' => 10,
-            'PDepend\\' => 8,
-        ),
-        'M' => 
-        array (
-            'Masterminds\\' => 12,
-        ),
-        'I' => 
-        array (
-            'Interop\\Container\\' => 18,
-        ),
-        'G' => 
-        array (
-            'GuzzleHttp\\Psr7\\' => 16,
-            'GuzzleHttp\\Promise\\' => 19,
-            'GuzzleHttp\\' => 11,
-            'Goutte\\' => 7,
-        ),
-        'D' => 
-        array (
-            'Drupal\\Driver\\' => 14,
-            'Drupal\\Core\\' => 12,
-            'Drupal\\Console\\Dotenv\\' => 22,
-            'Drupal\\Console\\Core\\' => 20,
-            'Drupal\\Console\\Composer\\Plugin\\' => 31,
-            'Drupal\\Console\\' => 15,
-            'Drupal\\Component\\' => 17,
-            'DrupalComposer\\DrupalScaffold\\' => 30,
-            'Dotenv\\' => 7,
-            'Doctrine\\Common\\Cache\\' => 22,
-            'Doctrine\\Common\\Annotations\\' => 28,
-            'Doctrine\\Common\\' => 16,
-        ),
-        'C' => 
-        array (
-            'Consolidation\\OutputFormatters\\' => 31,
-            'Consolidation\\AnnotatedCommand\\' => 31,
-            'Composer\\Semver\\' => 16,
-            'Composer\\Installers\\' => 20,
-        ),
-        'B' => 
-        array (
-            'Behat\\Mink\\Driver\\' => 18,
-            'Behat\\Mink\\' => 11,
-        ),
-        'A' => 
-        array (
-            'Asm89\\Stack\\' => 12,
-            'Alchemy\\Zippy\\' => 14,
-        ),
+    public static $firstCharsPsr4 = array (
+        'c' => true,
+        'Z' => true,
+        'X' => true,
+        'W' => true,
+        'T' => true,
+        'S' => true,
+        'R' => true,
+        'P' => true,
+        'M' => true,
+        'I' => true,
+        'G' => true,
+        'D' => true,
+        'C' => true,
+        'B' => true,
+        'A' => true,
     );
 
     public static $prefixDirsPsr4 = array (
@@ -1371,7 +1269,7 @@ class ComposerStaticInitb3f87df43af60ad53011a9e8088b640c
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitb3f87df43af60ad53011a9e8088b640c::$prefixLengthsPsr4;
+            $loader->firstCharsPsr4 = ComposerStaticInitb3f87df43af60ad53011a9e8088b640c::$firstCharsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitb3f87df43af60ad53011a9e8088b640c::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInitb3f87df43af60ad53011a9e8088b640c::$prefixesPsr0;
             $loader->fallbackDirsPsr0 = ComposerStaticInitb3f87df43af60ad53011a9e8088b640c::$fallbackDirsPsr0;

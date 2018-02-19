@@ -19,7 +19,7 @@
         "preferred-install": {
             "*": "dist"
         },
-        "sort-packages": "true"
+        "sort-packages": true
     },
     "repositories": {
         "workbench_tabs": {
@@ -44,7 +44,6 @@
         "drupal/workbench": "^1.0",
         "drupal/workbench_email": "^1.0@alpha",
         "drupal/workbench_moderation": "^1.2",
-        "palantirnet/workbench_reviewer": "dev-master",
         "palantirnet/workbench_tabs": "dev-8.x-1.x"
     },
     "require-dev": {

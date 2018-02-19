@@ -1555,49 +1555,6 @@
             "time": "2017-09-04T12:26:28+00:00"
         },
         {
-            "name": "palantirnet/workbench_reviewer",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/patrickfweston/workbench_reviewer.git",
-                "reference": "b493c8c9020c842d275ed3ddf6bbe197308941be"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/patrickfweston/workbench_reviewer/zipball/b493c8c9020c842d275ed3ddf6bbe197308941be",
-                "reference": "b493c8c9020c842d275ed3ddf6bbe197308941be",
-                "shasum": ""
-            },
-            "require": {
-                "cweagans/composer-patches": "~1.0",
-                "drupal/core": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "patches": {
-                    "drupal/core": {
-                        "Hook entity_field_storage_info is broken (https://www.drupal.org/node/2584729)": "https://www.drupal.org/files/issues/core-entity-sql-content-entity-storage-2583111-1_0.patch"
-                    }
-                }
-            },
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Patrick Weston",
-                    "email": "weston@palantir.net"
-                }
-            ],
-            "description": "Allows content editors to assign content to another user for review",
-            "homepage": "https://github.com/patrickfweston/workbench_reviewer",
-            "support": {
-                "source": "https://github.com/patrickfweston/workbench_reviewer/tree/master",
-                "issues": "https://github.com/patrickfweston/workbench_reviewer/issues"
-            },
-            "time": "2017-11-30T05:51:27+00:00"
-        },
-        {
             "name": "palantirnet/workbench_tabs",
             "version": "dev-8.x-1.x",
             "source": {
@@ -6626,7 +6583,6 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/workbench_email": 15,
-        "palantirnet/workbench_reviewer": 20,
         "palantirnet/workbench_tabs": 20
     },
     "prefer-stable": true,

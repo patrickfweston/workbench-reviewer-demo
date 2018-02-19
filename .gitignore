@@ -10,6 +10,14 @@ services.build.yml
 docroot/files
 docroot/sites/*/files
 
+# Ignore Drupal contrib downloaded by Composer
+drush/contrib/
+docroot/core/
+docroot/modules/contrib/
+docroot/themes/contrib/
+docroot/profiles/contrib/
+docroot/libraries/
+
 # Ignore virtual environment and artifacts
 .vagrant
 /artifacts
